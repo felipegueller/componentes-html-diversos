@@ -1,0 +1,81 @@
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+a:hover {
+    background: #0000000d;
+}
+
+#logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#header {
+    box-sizing: border-box;
+    height: 70px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e7e7e7;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: .5rem;
+}
+
+#menu a {
+    display: block; /* Permite definir o padding */
+    padding: .5rem;
+}
+
+#btn-mobile {
+    display: none; /* deixa ele invisível */
+}
+
+@media (max-width: 600px) {
+    #menu {
+        display: block;
+        position: absolute; /* Fica por cima de qualquer elemento que estiver na tela */
+        width: 100%; /*Ocupa 100% da tela*/
+        top: 70px;
+        right: 0px;
+        background-color: #e7e7e7;
+        height: 0;
+        z-index: 1000; /*Garante a sobreposição dos elementos abaixo*/
+        transition: 600ms; /* transição da altura da tela */ 
+        visibility: hidden;
+        overflow-y: auto; /* Não deixa os elementos aparecerem se o overflow estiver estourando */
+    }
+
+    #nav.active #menu {
+        height: calc(100vh - 70px); /* 100% da altura da tela*/
+        visibility: visible;
+    }
+
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid #0000000d;
+    }
+
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+}
