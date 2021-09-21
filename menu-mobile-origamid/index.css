@@ -48,7 +48,7 @@ a:hover {
         display: block;
         position: absolute; /* Fica por cima de qualquer elemento que estiver na tela */
         width: 100%; /*Ocupa 100% da tela*/
-        top: 70px;
+        top: 70px; /* Abaixo da altura do header */
         right: 0px;
         background-color: #e7e7e7;
         height: 0;
@@ -78,4 +78,34 @@ a:hover {
         cursor: pointer;
     }
 
+    #hamburguer {
+        border-top: 2px solid;
+        width: 20px;
+        margin-left: 5px;
+    }
+
+    #hamburguer::before,
+    #hamburguer::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: currentColor;
+        margin-top: 5px;
+        transition: 300ms;
+        position: relative;
+    }
+
+    #nav.active #hamburguer {
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
 }
