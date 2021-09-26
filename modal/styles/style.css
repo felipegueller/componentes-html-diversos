@@ -1,0 +1,52 @@
+.btn {
+    display: inline-block;
+    padding: 10px;
+    background-color: #006400;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background 100ms ease-in-out;
+}
+
+.btn:hover {
+    background-color: #004100;
+}
+
+.modal {
+    width: 500px;
+    height: 500px;
+    background-color: rebeccapurple;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    animation: animate;
+    animation-duration: 500ms;
+}
+
+@keyframes animate {
+    from { opacity: 1; }
+    from { opacity: 0; }
+}
+
+.close-modal {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    color: #f00;
+    transform: translate(50%, -50%);
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.close-modal:hover {
+    color: rgb(206, 46, 46);
+}
+
+.modal-active {
+    display: block;
+}
