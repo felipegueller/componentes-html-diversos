@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+}
+
+.loader {
+    height: 40px;
+    width: 40px;
+    border: 7px solid #da6111e5;
+    border-left-color: #cead97e5;
+    border-radius: 50%;
+    animation: loader 1s linear infinite;
+}
+
+@keyframes loader {
+    to {
+        transform: rotate(360deg);
+    }
+}
