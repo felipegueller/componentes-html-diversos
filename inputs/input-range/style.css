@@ -87,7 +87,7 @@ html, body {
     -webkit-appearance: none;
     height: 3px;
     width: 100%;
-    background-color: #ddd;
+    background: linear-gradient(90deg, #664AFF 50%, #ddd 50%);
     border-radius: 5px;
 }
 
