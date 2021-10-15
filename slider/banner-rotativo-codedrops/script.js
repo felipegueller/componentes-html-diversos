@@ -1,7 +1,10 @@
 const time = 3000,
       images = document.querySelectorAll('#slider img'),
-      totalImages = images.length
-let currentImageIndex = 0
+      totalImages = images.length,
+      btnOnOff = document.querySelector('input[type="checkbox"]')
+let currentImageIndex = 0,
+    interval,
+    sliderStatus = false
 
 const nextImage = () => {
     images[currentImageIndex]
@@ -15,12 +18,18 @@ const nextImage = () => {
 
     images[currentImageIndex]
         .classList.add("selected")
+
+    interval = setTimeout(nextImage, time);
+}
+
+const handleSlider = () => {
+    sliderStatus = !sliderStatus
+    return sliderStatus ? nextImage() : clearTimeout(interval)
 }
 
 const start = () => {
-    setInterval(() => {
-        nextImage()
-    }, time)
+    console.log(btnOnOff)
+    btnOnOff.onchange = () => handleSlider()
 }
 
 window.addEventListener('load', start)

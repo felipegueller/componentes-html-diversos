@@ -1,7 +1,12 @@
 body {
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-content: center; 
+    align-items: center;
+    background-color: #ececec;
 }
 
 #slider {
@@ -23,4 +28,46 @@ body {
 
 #slider img.selected {
     opacity: 1;
+}
+
+h1 {
+    font-family: 'Indie Flower', cursive;
+    color: #383232;
+}
+
+input[type="checkbox"] {
+    height: 100px;
+    width: 100px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: 
+    -10px -10px 15px #ffffff80,
+    10px 10px 15px #4646461f;
+    border: 8px solid #ececec;
+    border-radius: 50%;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+input[type="checkbox"]::after {
+    font-family: FontAwesome;
+    content: '\f011';
+    font-size: 35px;
+    color: #7a7a7a;
+}
+
+input[type="checkbox"]:checked {
+    box-shadow: 
+    -10px -10px 15px #ffffff80,
+    10px 10px 15px #4646461f,
+    inset -10px -10px 15px #ffffff80,
+    inset 10px 10px 15px #4646461f;
+}
+
+input[type="checkbox"]:checked::after {
+    color: #15e38a;
 }
