@@ -3,15 +3,43 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, intital-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta title="Validador de senha" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha512-L7MWcK7FNPcwNqnLdZq86lTHYLdQqZaz5YcAgE+5cnGmlw8JT03QB2+oxL100UeB6RlzZLUxCGSS4/++mNZdxw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- CSS links -->
     <link rel="stylesheet" href="./styles/style.css" />
 
     <!-- Scripts -->
-    <script src="./scripts/index.js" defer></script>
+    <script src="node_modules/password-validator/src/index.js"></script>
+    <script type="module" src="./scripts/index.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <label for="password">senha</label>
+      <div class="input-wrapper">
+        <input id="password" type="password" placeholder="Digite sua senha" />
+        <div class="icon">
+          <i id="icon" class="fas fa-eye"></i>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
