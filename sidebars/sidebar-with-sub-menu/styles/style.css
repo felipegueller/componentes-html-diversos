@@ -1,0 +1,147 @@
+/* For all elements */
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.menu-btn {
+  position: absolute;
+  top: 15px;
+  left: 45px;
+
+  height: 45px;
+  width: 45px;
+  border-radius: 3px;
+
+  text-align: center;
+  cursor: pointer;
+  background-color: #1b1b1b;
+  transition: left 400ms ease;
+}
+
+.menu-btn.clicked {
+  left: 260px;
+}
+
+.menu-btn i {
+  color: #fff;
+  font-size: 28px;
+  line-height: 45px;
+}
+
+.menu-btn.clicked i:before {
+  content: '\f00d';
+}
+
+.sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100vh;
+  top: 0;
+  left: -250px;
+
+  background-color: #1b1b1b;
+  overflow-y: auto;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  transition: left 400ms ease;
+}
+
+.sidebar.show {
+  left: 0;
+  box-shadow: 0 0 10px #948c8c;
+}
+
+.sidebar .text {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 65px;
+  text-align: center;
+  background-color: #1e1e1e;
+  letter-spacing: 1px;
+}
+
+.sidebar ul {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  background-color: #1b1b1b;
+}
+
+.sidebar ul li {
+  line-height: 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding-left: 20px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  border-left: 3px solid transparent;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active  {
+  color: cyan;
+  background-color: #1e1e1e;
+  border-left-color: cyan;
+}
+
+.sidebar ul li a i.caret {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  transition: transform 400ms;
+}
+
+.sidebar ul li a:hover i.caret {
+  transform: translate(-50%, -50%) rotate(-180deg);
+}
+
+/* For lists inside in main list (tree view) */
+.sidebar ul .treeview {
+  position: static;
+  display: none;
+  transition: 300ms;
+}
+
+.sidebar ul .treeview.show {
+  display: block;
+}
+
+.sidebar ul .treeview li {
+  border-bottom: none;
+}
+
+.sidebar ul .treeview li a {
+  font-size: 17px;
+  color: #e6e6e6;
+  padding-left: 40px;
+}
+
+
+/* Scrollbar settings */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 10px;
+}
