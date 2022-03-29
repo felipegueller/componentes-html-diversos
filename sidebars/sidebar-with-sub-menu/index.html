@@ -8,6 +8,94 @@
     <title>Menu lateral com sub-menus</title>
 
     <link rel="stylesheet" href="./styles/style.css" />
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/script.js" defer></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
+  <body>
+    <div class="menu-btn"><i class="fas fa-bars"></i></div>
+    <nav class="sidebar">
+      <div class="text">Menu lateral</div>
+      <ul>
+        <li>
+          <a href="#"> Painel de Controle </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-lightbulb-on"></i>
+            Novidades
+            <i class="fas fa-caret-down caret"></i>
+          </a>
+          <ul class="treeview">
+            <li>
+              <a href="#">
+                <i class="fas fa-file-exclamation"></i>
+                Páginas
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="far fa-palette"></i>
+                Cores
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="far fa-flask"></i>
+                Experimentos
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><i class="fas"></i>Notícias</a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas"></i>
+            Serviços
+            <i class="fas fa-caret-down caret"></i>
+          </a>
+          <ul class="treeview">
+            <li>
+              <a href="#"><i class="fas fa-"></i>Web Design</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-"></i>Photoshop</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-"></i>Projetos de Sites</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><i class="fas"></i>Marcas</a>
+        </li>
+        <li>
+          <a href="#"><i class="fas"></i>Sobre nós</a>
+        </li>
+        <li>
+          <a href="#"><i class="fas"></i>Patrocinadores</a>
+        </li>
+        <li>
+          <a href="#"><i class="fas"></i>Entre em contato</a>
+        </li>
+      </ul>
+    </nav>
+  </body>
 </html>
