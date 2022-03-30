@@ -1,0 +1,84 @@
+*, body {
+  padding: 0;
+  margin: 0;
+  user-select: none;
+}
+
+body {
+  background-color: #ebebeb;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.main-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  height: 100vh;
+  width: 70px;
+  overflow: hidden;
+  white-space: nowrap;
+
+  background-color: #fff;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 0 20px #d4d4d4;
+
+  transition: width 400ms ease;
+}
+
+.main-sidebar:hover {
+  width: 270px;
+  overflow-y: auto;
+}
+
+.main-sidebar ul {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+}
+
+.main-sidebar ul li a {
+  font-size: 20px;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.main-sidebar ul li a:hover {
+  background-color: #d6d6d6;
+  cursor: pointer;
+}
+
+.main-sidebar ul li a > i.fa {
+  font-size: 25px;
+  width: 40px;
+  padding: 10px;
+  color: gray;
+}
+
+.main-sidebar ul li a:hover > i.fa:first-child {
+  color: orange;
+}
+
+.main-sidebar .treeview > a {
+  position: relative;
+}
+
+.main-sidebar .treeview > a > i:last-child {
+  position:absolute;
+  top: 50%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  /* opacity: 0; */
+  transition:  transform 400ms;
+}
+
+/* .main-sidebar:hover .treeview > a > i:last-child,
+.main-sidebar.active .treeview > a > i:last-child { 
+  opacity: 1;
+} */
+
+.main-sidebar .treeview > a:hover  > i:last-child {
+  transform: translate(-100%, -50%) rotate(180deg);
+}
