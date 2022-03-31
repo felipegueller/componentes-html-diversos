@@ -27,8 +27,9 @@ body {
   transition: width 400ms ease;
 }
 
+.main-sidebar.active,
 .main-sidebar:hover {
-  width: 270px;
+  width: 275px;
   overflow-y: auto;
 }
 
@@ -44,11 +45,22 @@ body {
   padding: 10px;
   text-decoration: none;
   color: #666;
+  font-weight: 400;
 }
 
+.main-sidebar ul.treelist li a {
+  padding-left: 15px;
+}
+
+.main-sidebar ul li a.active,
 .main-sidebar ul li a:hover {
   background-color: #d6d6d6;
   cursor: pointer;
+}
+
+.main-sidebar .treelist li a.active {
+  font-weight: 600;
+  background-color: #f3f3f3;
 }
 
 .main-sidebar ul li a > i.fa:first-child {
@@ -58,6 +70,7 @@ body {
   color: gray;
 }
 
+.main-sidebar ul li a.active > i.fa:first-child,
 .main-sidebar ul li a:hover > i.fa:first-child {
   color: orange;
 }
@@ -76,6 +89,7 @@ body {
   transition: opacity 400ms, transform 400ms;
 }
 
+/* showing the caret icon only when the sidebar is opened */
 .main-sidebar:hover .treeview > a > i:last-child,
 .main-sidebar.active .treeview > a > i:last-child { 
   opacity: 1;
@@ -83,4 +97,37 @@ body {
 
 .main-sidebar .treeview > a:hover  > i:last-child {
   transform: translateY(-50%) rotate(-180deg);
+}
+
+.main-sidebar .treeview > a.active  > i:last-child::before {
+  content: '\f0d8';
+}
+
+.main-sidebar .treeview .treelist {
+  background-color: #f3f3f3;
+  display: none;
+  transition: 300ms;
+}
+
+.main-sidebar .treeview .treelist.show {
+  display: block;
+}
+
+/* .main-sidebar .treeview .treelist li a {
+
+} */
+
+
+/* settings of scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 10px;
 }
