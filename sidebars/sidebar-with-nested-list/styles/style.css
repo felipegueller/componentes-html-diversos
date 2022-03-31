@@ -43,6 +43,7 @@ body {
   display: block;
   padding: 10px;
   text-decoration: none;
+  color: #666;
 }
 
 .main-sidebar ul li a:hover {
@@ -50,7 +51,7 @@ body {
   cursor: pointer;
 }
 
-.main-sidebar ul li a > i.fa {
+.main-sidebar ul li a > i.fa:first-child {
   font-size: 25px;
   width: 40px;
   padding: 10px;
@@ -66,19 +67,20 @@ body {
 }
 
 .main-sidebar .treeview > a > i:last-child {
-  position:absolute;
+  position: absolute;
   top: 50%;
   left: 90%;
-  transform: translate(-50%, -50%);
-  /* opacity: 0; */
-  transition:  transform 400ms;
+  font-size: 22px;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: opacity 400ms, transform 400ms;
 }
 
-/* .main-sidebar:hover .treeview > a > i:last-child,
+.main-sidebar:hover .treeview > a > i:last-child,
 .main-sidebar.active .treeview > a > i:last-child { 
   opacity: 1;
-} */
+}
 
 .main-sidebar .treeview > a:hover  > i:last-child {
-  transform: translate(-100%, -50%) rotate(180deg);
+  transform: translateY(-50%) rotate(-180deg);
 }
