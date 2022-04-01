@@ -1,5 +1,6 @@
 const mainSidebar = document.querySelector('.main-sidebar')
 const sidebarList = document.querySelector('.sidebar-list')
+const pushMenu = document.querySelector('.menu-push')
 
 const isTreeListOpen = treeview => {
   const treelist = treeview.querySelector('ul.treelist.show')
@@ -57,4 +58,10 @@ const whoClicked = event => {
   toggleActiveLink(element)
 }
 
+const toggleShowSidebar = () => {
+  pushMenu.classList.toggle('clicked')
+  mainSidebar.classList.toggle('active')
+}
+
+pushMenu.addEventListener('click', toggleShowSidebar)
 sidebarList.addEventListener('click', whoClicked)
