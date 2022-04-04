@@ -1,0 +1,79 @@
+*, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  background-image: linear-gradient(45deg, cyan, yellow);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+main {
+  margin: auto;
+  padding: 80px;
+
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  max-height: 80vh;
+
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+main h1 {
+  color: white;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+main .form-control {
+  padding-bottom: 20px;
+}
+
+main .form-control input {
+  padding: 10px 15px;
+
+  width: 100%;
+  height: 40px;
+
+  border: none;
+  outline: none;
+  border-radius: 3px;
+
+  font-weight: 400;
+  font-size: 18px;
+}
+
+main .form-footer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+main .form-footer .submit-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  height: 40px;
+  font-size: 18px;
+  color: #fff;
+
+  background-color: dodgerblue;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 15px;
+
+  transition: background-color 200ms ease-in;
+}
+
+main .form-footer .submit-btn:hover {
+  cursor: pointer;
+  background-color: rgba(5, 125, 245, 0.8)
+}
+
