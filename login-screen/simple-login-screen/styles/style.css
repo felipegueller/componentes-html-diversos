@@ -74,6 +74,6 @@ main .form-footer .submit-btn {
 
 main .form-footer .submit-btn:hover {
   cursor: pointer;
-  background-color: rgba(5, 125, 245, 0.8)
+  background-color: rgba(5, 125, 245, 0.8);
 }
 
