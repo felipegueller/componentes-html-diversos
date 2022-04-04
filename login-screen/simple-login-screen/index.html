@@ -7,7 +7,31 @@
     <title>Tela simples de Login</title>
 
     <link rel="stylesheet" href="./styles/style.css" />
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/script.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <main>
+      <h1>Login</h1>
+      <form action="POST" name="login">
+        <div class="form-control">
+          <input type="text" placeholder="Username" name="username" />
+        </div>
+        <div class="form-control">
+          <input type="password" placeholder="Password" name="password" />
+        </div>
+        <div class="form-footer">
+          <button role="button" class="submit-btn" type="submit">
+            Sign in
+          </button>
+        </div>
+      </form>
+    </main>
+  </body>
 </html>
