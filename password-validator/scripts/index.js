@@ -1,31 +1,32 @@
 const input = document.querySelector('#password')
 const icon = document.querySelector('#icon')
+// const passwordValidator = require('password-validator')
 
-input.oninput = event => {
-  const password = event.target.value
+// input.oninput = event => {
+//   const password = event.target.value
 
-  const schema = new passwordValidator()
+//   const schema = new PasswordValidator()
 
-  schema
-    .is()
-    .min(10)
-    .is()
-    .max(100)
-    .has()
-    .uppercase(1)
-    .has()
-    .lowercase()
-    .has()
-    .digits(2)
-    .has()
-    .not()
-    .spaces()
-    .is()
-    .not()
-    .oneOf(['Passw0rd', 'Password123'])
+//   schema
+//     .is()
+//     .min(10)
+//     .is()
+//     .max(100)
+//     .has()
+//     .uppercase(1)
+//     .has()
+//     .lowercase()
+//     .has()
+//     .digits(2)
+//     .has()
+//     .not()
+//     .spaces()
+//     .is()
+//     .not()
+//     .oneOf(['Passw0rd', 'Password123'])
 
-  console.log(schema.validate(password, { details: true }))
-}
+//   console.log(schema.validate(password, { details: true }))
+// }
 
 icon.onclick = () => showPassword()
 
