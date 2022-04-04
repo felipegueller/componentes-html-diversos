@@ -8,13 +8,14 @@ const isTreeListOpen = treeview => {
 }
 
 const toggleTreelist = listItem => {
-  const isOthersTreelistOpened = document.querySelectorAll('ul.treelist.show')
-  if (isOthersTreelistOpened)
-    isOthersTreelistOpened.forEach(treelist =>
-      treelist.classList.remove('show')
-    )
-
   const treeList = listItem.querySelector('ul.treelist')
+  const treeListsOpened = document.querySelectorAll('ul.treelist.show')
+
+  if (treeListsOpened.length > 0)
+    treeListsOpened.forEach(treelist => {
+      if (treelist !== treeList) treelist.classList.remove('show')
+    })
+
   treeList.classList.toggle('show')
 }
 
