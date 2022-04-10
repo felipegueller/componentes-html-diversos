@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: #95d246;
+  color: #fff;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+.container nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.container nav .logo {
+  width: 70px;
+}
+
+.container nav .logo img{
+  width: 100%;
+}
+
+.container nav button {
+  padding: 10px 20px;
+  font-size: 17px;
+  background-color: #95d246;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.container main {
+  display: flex;
+  align-items: center;
+}
+
+.container main .main-text {
+  text-transform: uppercase;
+  width: 50%;
+}
+
+.container main .main-text h1 {
+  font-size: 4em;
+}
+
+.container main .main-text h3 {
+  font-size: 1.5em;
+  margin-bottom: 16px;
+}
+
+.container main .main-text button {
+  padding: 10px 30px;
+  background-color: #95d246;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.container main .main-text-footer {
+  display: flex;
+  margin-top: 80px;
+}
+
+.container main .main-text-footer h4 {
+  font-size: 1em;
+  color: #686767;
+}
+
+.container main .main-text-footer p {
+  margin-top: 10px;
+  color: #8d8c8c;
+  font-weight: 500;
+}
+
+.container main .main-text-footer div:nth-child(1) {
+  margin-right: 50px;
+}
+
+.container main .main-image {
+  width: 600px;
+}
+
+.container main .main-image img {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .container main {
+    flex-direction: column;
+  }
+
+  .container main .main-image,
+  .container main .main-text {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container main .main-text .main-text-footer {
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+
+  .container main .main-text .main-text-footer div {
+    margin: 15px 0 !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .container main .main-text h1 {
+    font-size: 3.5rem;
+  }
+
+  .container main .main-text h3 {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 300px) {
+  .container main .main-text h1 {
+    font-size: 2.5rem;
+  }
+
+}
