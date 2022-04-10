@@ -84,12 +84,15 @@ body {
 
 .main-sidebar ul li a.active,
 .main-sidebar ul li a:hover {
-  background-color: #d6d6d6;
+  /* background-color: #d6d6d6; */
+  background-color: #1e282c;
+  color: #fff;
   cursor: pointer;
 }
-
+  
 .main-sidebar .treelist li a.active {
   font-weight: 600;
+  color: #666;
   background-color: #f3f3f3;
 }
 
@@ -103,6 +106,7 @@ body {
 .main-sidebar ul li a.active > i.fa:first-child,
 .main-sidebar ul li a:hover > i.fa:first-child {
   color: orange;
+  /* color: #09d; */
 }
 
 .main-sidebar .treeview > a {
