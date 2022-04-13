@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,6 +11,65 @@
 
     <!-- My scripts -->
     <script src="./scripts/script.js" defer></script>
+
+    <!-- Fonts Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome css link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h1>Filtro de dados dentro da tabela</h1>
+      <div class="table-container">
+        <table data-js="table" class="table">
+          <thead>
+            <tr class="mano">
+              <th>nome</th>
+              <th>apelido</th>
+              <th>e-mail</th>
+              <th>cidade</th>
+              <th>cep</th>
+              <th>site de portfólio</th>
+            </tr>
+            <tr>
+              <form data-js="table-search">
+                <th><input type="text" name="name" placeholder="Nome" /></th>
+                <th>
+                  <input type="text" name="nickname" placeholder="city" />
+                </th>
+                <th><input type="text" name="email" placeholder="E-mail" /></th>
+                <th><input type="text" name="city" placeholder="Cidade" /></th>
+                <th><input type="text" name="cep" placeholder="Cep" /></th>
+                <th><input type="text" name="website" placeholder="Site" /></th>
+              </form>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Felipe</td>
+              <td>Gueller</td>
+              <td>felipe.gueller@gmail.com</td>
+              <td>Castelo</td>
+              <td>29360-000</td>
+              <td>felipegueller.com.br</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- end of table-container -->
+    </div>
+    <!-- end of container -->
+  </body>
 </html>
