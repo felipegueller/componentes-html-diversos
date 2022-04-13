@@ -45,14 +45,49 @@
             </tr>
             <tr>
               <form data-js="table-search">
-                <th><input type="text" name="name" placeholder="Nome" /></th>
                 <th>
-                  <input type="text" name="nickname" placeholder="city" />
+                  <div class="input-wrapper">
+                    <input type="text" name="name" placeholder="Nome" />
+                    <i class="fas fa-search"></i>
+                  </div>
                 </th>
-                <th><input type="text" name="email" placeholder="E-mail" /></th>
-                <th><input type="text" name="city" placeholder="Cidade" /></th>
-                <th><input type="text" name="cep" placeholder="Cep" /></th>
-                <th><input type="text" name="website" placeholder="Site" /></th>
+                <th>
+                  <div class="input-wrapper">
+                    <input type="text" name="nickname" placeholder="Apelido" />
+                    <i class="fas fa-search"></i>
+                  </div>
+                </th>
+                <th>
+                  <div class="input-wrapper">
+                    <input type="text" name="email" placeholder="E-mail" />
+                    <i class="fas fa-search"></i>
+                  </div>
+                </th>
+                <th>
+                  <div class="input-wrapper">
+                    <select name="cities" id="cities">
+                      <option value="">Castelo</option>
+                      <option value="">Cachoeiro</option>
+                      <option value="">Venda nova</option>
+                    </select>
+                  </div>
+                  <!-- <div class="input-wrapper">
+                    <input type="text" name="city" placeholder="Cidade" />
+                    <i class="fas fa-search"></i>
+                  </div> -->
+                </th>
+                <th>
+                  <div class="input-wrapper">
+                    <input type="text" name="cep" placeholder="Cep" />
+                    <i class="fas fa-search"></i>
+                  </div>
+                </th>
+                <th>
+                  <div class="input-wrapper">
+                    <input type="text" name="website" placeholder="Site" />
+                    <i class="fas fa-search"></i>
+                  </div>
+                </th>
               </form>
             </tr>
           </thead>
