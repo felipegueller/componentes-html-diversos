@@ -68,7 +68,6 @@ const findMatchedSuggestions = async event => {
   }
 
   const matchedSuggestions = await getMatchedSuggestions(input)
-  // console.log(matchedSuggestions)
 
   const suggestionsItems = matchedSuggestions
     ? getSuggetionsItems(matchedSuggestions)
@@ -119,12 +118,24 @@ const puttingSuggestionOnInput = event => {
   inputWrapper.classList.remove('active')
 }
 
+const closeSuggestionBox = event => {
+  const input = event.target
+  const inputWrapper = input.parentNode
+
+  if (inputWrapper.classList.contains('active'))
+    inputWrapper.classList.remove('active')
+}
+
 suggestionsLists.forEach(suggestionList => {
   suggestionList.addEventListener('click', puttingSuggestionOnInput)
 })
 
 inputSearch.forEach(input => {
   input.addEventListener('input', findMatchedSuggestions)
+})
+
+inputSearch.forEach(input => {
+  input.addEventListener('blur', closeSuggestionBox)
 })
 
 window.addEventListener('DOMContentLoaded', addDataOnTable)
