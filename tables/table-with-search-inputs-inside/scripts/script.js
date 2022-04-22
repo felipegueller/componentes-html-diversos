@@ -19,11 +19,43 @@ const getUsers = async () => {
 }
 
 const showSuggestions = (suggestions, input) => {
-  if (suggestions.length <= 0) suggestions = `<li>${input.value}</li>`
+  if (suggestions.length <= 0) {
+    const li = document.createElement('li')
+    li.textContent = input.value
+    suggestions.push(li)
+  }
 
   const inputWrapper = input.parentNode
   const suggestionsList = inputWrapper.querySelector('.suggestions-box ul')
-  suggestionsList.innerHTML = suggestions
+  suggestionsList.innerHTML = ''
+
+  suggestions.forEach(suggestionsItem =>
+    suggestionsList.append(suggestionsItem)
+  )
+}
+
+const getSuggetionsItems = suggestionsArray => {
+  const suggestionsItems = suggestionsArray.map(suggestion => {
+    const li = document.createElement('li')
+    li.textContent = suggestion
+
+    return li
+  })
+  return suggestionsItems
+}
+
+const getMatchedSuggestions = async input => {
+  const { name, value } = input
+  const userData = await getUsers()
+  const apiData = userData.map(user => {
+    return name === 'city' || name === 'zipcode'
+      ? user.address[name]
+      : user[name]
+  })
+
+  return apiData.filter(data =>
+    data.toLowerCase().startsWith(value.toLowerCase())
+  )
 }
 
 const findMatchedSuggestions = async event => {
@@ -35,23 +67,14 @@ const findMatchedSuggestions = async event => {
     return
   }
 
-  let matchedSuggestions = []
+  const matchedSuggestions = await getMatchedSuggestions(input)
+  // console.log(matchedSuggestions)
 
-  const userData = await getUsers()
-  const apiData = userData.map(user => {
-    const key = input.name
-    return user[key]
-  })
+  const suggestionsItems = matchedSuggestions
+    ? getSuggetionsItems(matchedSuggestions)
+    : []
 
-  matchedSuggestions = apiData.filter(suggestion => {
-    return suggestion.toLowerCase().startsWith(input.value.toLowerCase())
-  })
-
-  matchedSuggestions = matchedSuggestions.reduce((acc, suggestion) => {
-    return `${acc}<li>${suggestion}</li>`
-  }, '')
-
-  showSuggestions(matchedSuggestions, input)
+  showSuggestions(suggestionsItems, input)
 
   parentInputWrapper.classList.add('active')
 }
