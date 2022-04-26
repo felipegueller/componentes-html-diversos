@@ -27,7 +27,10 @@ const showSuggestions = (suggestions, input) => {
 
   const inputWrapper = input.parentNode
   const suggestionsList = inputWrapper.querySelector('.suggestions-box ul')
-  suggestionsList.innerHTML = ''
+  const haveListItems = suggestionsList.querySelectorAll('li')
+
+  if (haveListItems)
+    haveListItems.forEach(listItem => suggestionsList.removeChild(listItem))
 
   suggestions.forEach(suggestionsItem =>
     suggestionsList.append(suggestionsItem)
