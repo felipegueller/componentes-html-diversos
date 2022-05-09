@@ -125,8 +125,10 @@ const closeSuggestionBox = event => {
   const input = event.target
   const inputWrapper = input.parentNode
 
-  if (inputWrapper.classList.contains('active'))
-    inputWrapper.classList.remove('active')
+  setTimeout(() => {
+    if (inputWrapper.classList.contains('active'))
+      inputWrapper.classList.remove('active')
+  }, 100)
 }
 
 suggestionsLists.forEach(suggestionList => {
