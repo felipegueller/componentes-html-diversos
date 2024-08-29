@@ -1,44 +1,57 @@
 <!DOCTYPE html>
 
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta title="Validador de senha" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta title="Validador de senha" />
 
-    <!-- Font Awesome CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-      integrity="sha512-L7MWcK7FNPcwNqnLdZq86lTHYLdQqZaz5YcAgE+5cnGmlw8JT03QB2+oxL100UeB6RlzZLUxCGSS4/++mNZdxw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+        <!-- Font Awesome CDN -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+            integrity="sha512-L7MWcK7FNPcwNqnLdZq86lTHYLdQqZaz5YcAgE+5cnGmlw8JT03QB2+oxL100UeB6RlzZLUxCGSS4/++mNZdxw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
 
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
 
-    <!-- CSS links -->
-    <link rel="stylesheet" href="./styles/style.css" />
+        <!-- CSS links -->
+        <link rel="stylesheet" href="./styles/style.css" />
 
-    <!-- Scripts -->
-    <script src="./scripts/index.js" defer></script>
-  </head>
-  <body>
-    <main>
-      <label for="password">senha</label>
-      <div class="input-wrapper">
-        <input id="password" type="password" placeholder="Digite sua senha" />
-        <div class="icon">
-          <i id="icon" class="fas fa-eye"></i>
-        </div>
-      </div>
-    </main>
-  </body>
+        <!-- Scripts -->
+        <script src="./scripts/index.js" defer></script>
+    </head>
+    <body>
+        <main>
+          <h1>Entrar</h1>
+
+            <label for="name">Nome</label>
+            <div class="input-wrapper">
+                <input id="name" type="text" placeholder="Digite seu nome" />
+            </div>
+
+            <label for="password">senha</label>
+            <div class="input-wrapper">
+                <input
+                    id="password"
+                    type="text"
+                    placeholder="Digite sua senha"
+                />
+                <button class="icon-box">
+                  <i id="icon" class="fas fa-eye"></i>
+                </button>
+            </div>
+
+            <button id="submit" type="submit">Entrar</button>
+        </main>
+    </body>
 </html>

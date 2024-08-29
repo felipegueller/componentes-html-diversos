@@ -22,11 +22,33 @@ main {
   margin: auto;
   width: 100%;
   max-width: 45rem;
+  padding: 2.5rem;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, .75);
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.25rem;
+  color: #6444ff;
 }
 
 label {
   font-size: 2rem;
   text-transform: capitalize;
+}
+
+button#submit {
+  display: block;
+  width: 100%;
+  padding: .5rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.75rem;
+  color: #fff;
+  background-color: #6444ff;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
 .input-wrapper {
@@ -46,7 +68,14 @@ label {
   outline: none;
 }
 
-.input-wrapper .icon {
+.input-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+/* Estilizar o ícone */
+.input-wrapper .icon-box {
+  background-color: transparent;
+  border: none;
   position: absolute;
   width: 3.5rem;
   height: 3.5rem;
